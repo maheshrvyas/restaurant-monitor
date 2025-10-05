@@ -1,0 +1,79 @@
+[
+  {
+    "name": "Taco Bell",
+    "url": "https://www.swiggy.com/restaurants/592356/dineout",
+    "location": "Unknown",
+    "availability": "Unknown",
+    "hours": "Not found",
+    "timestamp": "2025-10-05T06:25:27.707Z"
+  },
+  {
+    "name": "Amoroso",
+    "url": "https://www.swiggy.com/restaurants/amoroso-jubilee-hills-hyderabad-1000237/dineout",
+    "location": "Unknown",
+    "availability": "Unknown",
+    "hours": "Not found",
+    "timestamp": "2025-10-05T06:25:31.330Z"
+  },
+  {
+    "name": "Flechazo",
+    "url": "https://www.swiggy.com/restaurants/flechazo-raidurgam-hyderabad-693839/dineout",
+    "location": "Unknown",
+    "availability": "Unknown",
+    "hours": "Not found",
+    "timestamp": "2025-10-05T06:25:34.940Z"
+  },
+  {
+    "name": "Insomnia",
+    "url": "https://www.swiggy.com/restaurants/insomnia-jubilee-hills-hyderabad-592351/dineout",
+    "location": "Unknown",
+    "availability": "Unknown",
+    "hours": "Not found",
+    "timestamp": "2025-10-05T06:25:38.583Z"
+  },
+  {
+    "name": "Ta.Ma.Sha- Restro Cafe",
+    "url": "https://www.swiggy.com/restaurants/ta-ma-sha-restro-cafe-jubilee-hills-hyderabad-709115/dineout",
+    "location": "Unknown",
+    "availability": "Unknown",
+    "hours": "Not found",
+    "timestamp": "2025-10-05T06:25:42.369Z"
+  },
+  {
+    "name": "The Waffle Garden",
+    "url": "https://www.swiggy.com/restaurants/the-fishermans-wharf-jubilee-hills-hyderabad-592354/dineout",
+    "location": "Unknown",
+    "availability": "Unknown",
+    "hours": "Not found",
+    "timestamp": "2025-10-05T06:25:45.985Z"
+  },
+  {
+    "name": "Unknown",
+    "url": "https://www.swiggy.com/restaurants/barbeque-nation-jubilee-hills-hyderabad-592357/dineout",
+    "location": "Unknown",
+    "availability": "Unknown",
+    "hours": "Not found",
+    "timestamp": "2025-10-05T06:25:49.503Z"
+  },
+  {
+    "name": "Unknown",
+    "url": "https://www.swiggy.com/restaurants/chilis-jubilee-hills-hyderabad-592358/dineout",
+    "location": "Unknown",
+    "availability": "Unknown",
+    "hours": "Not found",
+    "timestamp": "2025-10-05T06:25:53.138Z"
+  },
+  {
+    "name": "Unknown",
+    "url": "https://www.swiggy.com/restaurants/olive-bistro-jubilee-hills-hyderabad-592359/dineout",
+    "location": "Unknown",
+    "availability": "Unknown",
+    "hours": "Not found",
+    "timestamp": "2025-10-05T06:25:56.628Z"
+  },
+  {
+    "name": "Flechazo GOLD",
+    "url": "https://www.zomato.com/hyderabad/flechazo-gold-madhapur",
+    "error": "page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.zomato.com/hyderabad/flechazo-gold-madhapur\nCall log:\n\u001b[2m  - navigating to \"https://www.zomato.com/hyderabad/flechazo-gold-madhapur\", waiting until \"domcontentloaded\"\u001b[22m\n"
+  }
+]
