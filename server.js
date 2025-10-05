@@ -10,4 +10,6 @@ app.get('/db.json', (req, res) => {
   res.sendFile(path.join(__dirname, 'backend/db.json'));
 });
 
-app.listen(3000, () => console.log('✅ Dashboard running at http://localhost:3000'));
+app.listen(3000, () => {
+  console.log('✅ Monitoring Dashboard running at http://localhost:3000');
+});

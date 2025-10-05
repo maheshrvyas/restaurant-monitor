@@ -6,7 +6,7 @@
     "CurrentAvailability": "Open",
     "openTimings": "Not Mentioned",
     "closeTimings": "11PM",
-    "timestamp": "2025-10-05T13:02:50.115Z"
+    "timestamp": "2025-10-05T11:01:26.783Z"
   },
   {
     "name": "Amoroso",
@@ -15,16 +15,16 @@
     "CurrentAvailability": "Open",
     "openTimings": "Not Mentioned",
     "closeTimings": "11PM",
-    "timestamp": "2025-10-05T13:02:53.796Z"
+    "timestamp": "2025-10-05T11:01:30.386Z"
   },
   {
-    "name": "Unknown",
+    "name": "Flechazo",
     "url": "https://www.swiggy.com/restaurants/flechazo-raidurgam-hyderabad-693839/dineout",
-    "location": "Unknown",
-    "CurrentAvailability": "Unknown",
-    "openTimings": "Not Mentioned",
+    "location": "Unit 1-D,Survey -79/P,G-Square Building, Raidurgam West Hyderabad 500032",
+    "CurrentAvailability": "Closed",
+    "openTimings": "6:30PM",
     "closeTimings": "Not Mentioned",
-    "timestamp": "2025-10-05T13:02:57.202Z"
+    "timestamp": "2025-10-05T11:01:33.976Z"
   },
   {
     "name": "Insomnia",
@@ -33,7 +33,7 @@
     "CurrentAvailability": "Open",
     "openTimings": "Not Mentioned",
     "closeTimings": "11:30PM",
-    "timestamp": "2025-10-05T13:03:00.814Z"
+    "timestamp": "2025-10-05T11:01:37.715Z"
   },
   {
     "name": "Ta.Ma.Sha- Restro Cafe",
@@ -42,7 +42,7 @@
     "CurrentAvailability": "Open",
     "openTimings": "Not Mentioned",
     "closeTimings": "11PM",
-    "timestamp": "2025-10-05T13:03:04.415Z"
+    "timestamp": "2025-10-05T11:01:41.294Z"
   },
   {
     "name": "The Waffle Garden",
@@ -51,6 +51,6 @@
     "CurrentAvailability": "Open",
     "openTimings": "Not Mentioned",
     "closeTimings": "10PM",
-    "timestamp": "2025-10-05T13:03:08.158Z"
+    "timestamp": "2025-10-05T11:01:44.879Z"
   }
 ]
