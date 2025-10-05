@@ -12,11 +12,11 @@ function Dashboard() {
     fetch('/db.json')
       .then(res => res.json())
       .then(grouped => {
-        const flattened = Object.entries(grouped).map(([name, entries]) => {
-          const latest = entries[entries.length - 1];
-          return { name, ...latest };
-        });
-        setData(flattened);
+        // ✅ Flatten all entries across all restaurants
+        const allEntries = Object.entries(grouped).flatMap(([name, entries]) =>
+          entries.map(entry => ({ name, ...entry }))
+        );
+        setData(allEntries);
       })
       .catch(err => console.error('Failed to load db.json:', err));
   }, []);

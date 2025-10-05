@@ -72,15 +72,16 @@ async function scrapeRestaurant(url) {
 
   const dbPath = path.join(backendDir, 'db.json');
   let existing = {};
-if (fs.existsSync(dbPath)) {
-  const raw = fs.readFileSync(dbPath, 'utf-8');
-  try {
-    existing = raw.trim() ? JSON.parse(raw) : {};
-  } catch (err) {
-    console.warn('⚠️ db.json is corrupted or invalid. Starting fresh.');
-    existing = {};
+console.log('📁 Writing to db.json:', dbPath);
+  if (fs.existsSync(dbPath)) {
+    const raw = fs.readFileSync(dbPath, 'utf-8');
+    try {
+      existing = raw.trim() ? JSON.parse(raw) : {};
+    } catch (err) {
+      console.warn('⚠️ db.json is corrupted or invalid. Starting fresh.');
+      existing = {};
+    }
   }
-}
 
   for (const r of restaurants) {
     try {
@@ -99,7 +100,7 @@ if (fs.existsSync(dbPath)) {
       if (!existing[r.name]) existing[r.name] = [];
       existing[r.name].push(entry);
 
-      console.log(`✅ Scraped ${r.name}: ${info.CurrentAvailability}`);
+      console.log(`✅ Scraped ${r.name} at ${timestamp}: ${info.CurrentAvailability}`);
     } catch (err) {
       console.error(`❌ Error scraping ${r.name}: ${err.message}`);
       const errorEntry = {
@@ -112,6 +113,11 @@ if (fs.existsSync(dbPath)) {
     }
   }
 
+  try {
   fs.writeFileSync(dbPath, JSON.stringify(existing, null, 2));
-  console.log(`📦 Updated db.json with grouped entries`);
+  console.log(`📦 Updated db.json with all timestamped entries`);
+} catch (err) {
+  console.error(`❌ Failed to write db.json: ${err.message}`);
+}
+
 })();
