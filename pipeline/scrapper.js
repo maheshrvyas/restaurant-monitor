@@ -104,7 +104,7 @@ if (fs.existsSync(dbPath)) {
       console.error(`❌ Error scraping ${r.name}: ${err.message}`);
       const errorEntry = {
         error: err.message,
-        timestamp: formatISTTimestamp(new Date()),
+        timestamp: new Date(),
         url: r.url
       };
       if (!existing[r.name]) existing[r.name] = [];
