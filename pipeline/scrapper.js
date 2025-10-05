@@ -19,8 +19,7 @@ async function scrapeRestaurant(url) {
   const browser = await chromium.launch();
   const page = await browser.newPage();
   await page.goto(url, { waitUntil: 'domcontentloaded' });
-
-  await page.waitForTimeout(3000); // wait for dynamic content
+  await page.waitForTimeout(3000);
 
   const isDineout = url.includes('/dineout');
 
@@ -35,24 +34,16 @@ async function scrapeRestaurant(url) {
     let closeTimings = 'Not Mentioned';
 
     if (isDineout) {
-      // ✅ Availability from status element
       const statusEl = document.querySelector('[data-testid="rdp_serviceability_timing_status"]');
       const statusText = statusEl?.innerText.trim() || '';
+      if (/Open now/i.test(statusText)) CurrentAvailability = 'Open';
+      else if (/Closed/i.test(statusText)) CurrentAvailability = 'Closed';
 
-      if (/Open now/i.test(statusText)) {
-        CurrentAvailability = 'Open';
-      } else if (/Closed/i.test(statusText)) {
-        CurrentAvailability = 'Closed';
-      }
-
-      // ✅ Location from dedicated location content block
       const locationEl = document.querySelector('[data-testid="rdp_location_text_content"]');
       location = locationEl?.innerText.trim() || 'Unknown';
 
-      // ✅ Timings from serviceability message
       const timingEl = document.querySelector('[data-testid="rdp_serviceability_status_message"]');
       const timingText = timingEl?.innerText.trim() || '';
-
       if (/CLOSED, OPENS AT/i.test(timingText)) {
         const match = timingText.match(/OPENS AT\s+([0-9:]+[APMapm]+)/);
         openTimings = match ? match[1] : 'Not Mentioned';
@@ -64,24 +55,9 @@ async function scrapeRestaurant(url) {
       location = document.querySelector('[data-testid="restaurant-address"]')?.innerText || 'Unknown';
       const statusEl = document.querySelector('[data-testid="restaurant-status"]');
       const statusText = statusEl?.innerText.trim() || '';
-
-      if (/Accepting Orders/i.test(statusText)) {
-        CurrentAvailability = 'Open';
-      } else if (/Closed/i.test(statusText)) {
-        CurrentAvailability = 'Closed';
-      }
-
-      // For delivery pages, timings not available
-      openTimings = 'Not Mentioned';
-      closeTimings = 'Not Mentioned';
+      if (/Accepting Orders/i.test(statusText)) CurrentAvailability = 'Open';
+      else if (/Closed/i.test(statusText)) CurrentAvailability = 'Closed';
     }
-
-    console.log(`✅ Scraped ${name}`);
-    console.log(`→ URL: ${url}`);
-    console.log(`→ Location: ${location}`);
-    console.log(`→ CurrentAvailability: ${CurrentAvailability}`);
-    console.log(`→ openTimings: ${openTimings}`);
-    console.log(`→ closeTimings: ${closeTimings}`);
 
     return { name, location, CurrentAvailability, openTimings, closeTimings };
   }, { isDineout, url });
@@ -90,24 +66,52 @@ async function scrapeRestaurant(url) {
   return data;
 }
 
-
 (async () => {
-  const results = [];
+  const backendDir = path.join(__dirname, '../backend');
+  if (!fs.existsSync(backendDir)) fs.mkdirSync(backendDir);
+
+  const dbPath = path.join(backendDir, 'db.json');
+  let existing = {};
+if (fs.existsSync(dbPath)) {
+  const raw = fs.readFileSync(dbPath, 'utf-8');
+  try {
+    existing = raw.trim() ? JSON.parse(raw) : {};
+  } catch (err) {
+    console.warn('⚠️ db.json is corrupted or invalid. Starting fresh.');
+    existing = {};
+  }
+}
+
   for (const r of restaurants) {
     try {
       const info = await scrapeRestaurant(r.url);
-      const timestamp = new Date();
-      results.push({ ...r, ...info, timestamp });
+      const timestamp = formatISTTimestamp(new Date());
+
+      const entry = {
+        location: info.location,
+        CurrentAvailability: info.CurrentAvailability,
+        openTimings: info.openTimings,
+        closeTimings: info.closeTimings,
+        timestamp,
+        url: r.url
+      };
+
+      if (!existing[r.name]) existing[r.name] = [];
+      existing[r.name].push(entry);
+
+      console.log(`✅ Scraped ${r.name}: ${info.CurrentAvailability}`);
     } catch (err) {
-      console.error(`❌ Error scraping ${r.url}: ${err.message}`);
-      results.push({ ...r, error: err.message });
+      console.error(`❌ Error scraping ${r.name}: ${err.message}`);
+      const errorEntry = {
+        error: err.message,
+        timestamp: formatISTTimestamp(new Date()),
+        url: r.url
+      };
+      if (!existing[r.name]) existing[r.name] = [];
+      existing[r.name].push(errorEntry);
     }
   }
 
-  const backendDir = path.join(__dirname, '../backend');
-  if (!fs.existsSync(backendDir)) {
-    fs.mkdirSync(backendDir);
-  }
-
-  fs.writeFileSync(path.join(backendDir, 'db.json'), JSON.stringify(results, null, 2));
+  fs.writeFileSync(dbPath, JSON.stringify(existing, null, 2));
+  console.log(`📦 Updated db.json with grouped entries`);
 })();

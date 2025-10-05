@@ -27,6 +27,9 @@ jobs:
       - name: Run scraper
         run: npm run scrape
 
+      - name: Ensure public folder exists
+        run: mkdir -p frontend/dashboard/public
+
       - name: Copy db.json to frontend dashboard
         run: cp backend/db.json frontend/dashboard/public/db.json
 
@@ -36,5 +39,5 @@ jobs:
           git config --global user.email "actions@github.com"
           git add backend/db.json frontend/dashboard/public/db.json
           git commit -m "Update scraped restaurant data"
-          git push
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:${{ github.ref }}
         continue-on-error: true
