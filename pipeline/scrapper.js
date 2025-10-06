@@ -142,6 +142,8 @@ console.log('📁 Writing to db.json:', dbPath);
         url: r.url
       };
 
+      const shouldAlert = expectedAvailability === 'Open' && info.CurrentAvailability === 'Closed';
+
       if (shouldAlert) {
         const mailOptions = {
           from: process.env.EMAIL_USER,
