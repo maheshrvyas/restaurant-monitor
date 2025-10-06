@@ -46,4 +46,4 @@ jobs:
         continue-on-error: true
 
       - name: Show db.json contents
-        run: cat backend/db.json || echo "db.json not found"
+        run: cat backend/db.json || echo "db.json not found" 

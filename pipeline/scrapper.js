@@ -114,6 +114,8 @@ console.log('📁 Writing to db.json:', dbPath);
   }
 
   console.log('Scraping Completed');
+  console.log(existing);
+  console.log(dbPath);
 
   try {
   fs.writeFileSync(dbPath, JSON.stringify(existing, null, 2));
