@@ -17,15 +17,22 @@ function formatISTTimestamp(date) {
 
 function parseTimeToIST(timeStr) {
   if (!timeStr || timeStr === 'Not Mentioned') return null;
+  const match = timeStr.match(/(\d{1,2})(?::(\d{2}))?\s*(AM|PM)/i);
+  if (!match) return null;
+
+  let [_, hour, minute, period] = match;
+  hour = parseInt(hour, 10);
+  minute = parseInt(minute || '0', 10);
+
+  if (period.toUpperCase() === 'PM' && hour < 12) hour += 12;
+  if (period.toUpperCase() === 'AM' && hour === 12) hour = 0;
+
   const now = new Date();
-  const [time, modifier] = timeStr.trim().split(/(?<=\d)(?=[APMapm]+)/);
-  const [hours, minutes] = time.split(':').map(Number);
-  let h = modifier.toLowerCase().includes('pm') ? hours + 12 : hours;
-  if (h === 24) h = 0;
-  const d = new Date(now);
-  d.setHours(h, minutes || 0, 0, 0);
-  return d;
+  const istTime = new Date(now);
+  istTime.setHours(hour, minute, 0, 0);
+  return istTime;
 }
+
 
 
 async function scrapeRestaurant(url) {
@@ -103,15 +110,17 @@ console.log('📁 Writing to db.json:', dbPath);
 
       const openTime = parseTimeToIST(info.openTimings);
       const closeTime = parseTimeToIST(info.closeTimings);
-      const now = new Date();
+      const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Kolkata' }));
 
       let expectedAvailability = 'Unknown';
-      if (openTime && closeTime) {
-        expectedAvailability = now >= openTime && now <= closeTime ? 'Open' : 'Closed';
-      } else if (openTime) {
+      if (openTime && !closeTime) {
         expectedAvailability = now >= openTime ? 'Open' : 'Closed';
-      } else if (closeTime) {
+      } else if (!openTime && closeTime) {
         expectedAvailability = now <= closeTime ? 'Open' : 'Closed';
+      } else if (openTime && closeTime) {
+        expectedAvailability = now >= openTime && now <= closeTime ? 'Open' : 'Closed';
+      } else {
+        expectedAvailability = 'Unknown';
       }
 
       const entry = {
