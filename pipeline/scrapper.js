@@ -82,7 +82,7 @@ console.log('📁 Writing to db.json:', dbPath);
       existing = {};
     }
   }
-
+  console.log('Scraping started...');
   for (const r of restaurants) {
     try {
       const info = await scrapeRestaurant(r.url);
@@ -112,6 +112,8 @@ console.log('📁 Writing to db.json:', dbPath);
       existing[r.name].push(errorEntry);
     }
   }
+
+  console.log('Scraping Completed');
 
   try {
   fs.writeFileSync(dbPath, JSON.stringify(existing, null, 2));
