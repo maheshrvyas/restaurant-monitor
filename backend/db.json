@@ -17,6 +17,11 @@
       "closeTimings": "11PM",
       "timestamp": "06-10-2025 - 15:08",
       "url": "https://www.swiggy.com/restaurants/592356/dineout"
+    },
+    {
+      "error": "shouldAlert is not defined",
+      "timestamp": "2025-10-06T13:45:39.553Z",
+      "url": "https://www.swiggy.com/restaurants/592356/dineout"
     }
   ],
   "Amoroso": [
@@ -36,6 +41,11 @@
       "openTimings": "Not Mentioned",
       "closeTimings": "11PM",
       "timestamp": "06-10-2025 - 15:08",
+      "url": "https://www.swiggy.com/restaurants/amoroso-jubilee-hills-hyderabad-1000237/dineout"
+    },
+    {
+      "error": "shouldAlert is not defined",
+      "timestamp": "2025-10-06T13:45:43.138Z",
       "url": "https://www.swiggy.com/restaurants/amoroso-jubilee-hills-hyderabad-1000237/dineout"
     }
   ],
@@ -57,6 +67,11 @@
       "closeTimings": "4PM",
       "timestamp": "06-10-2025 - 15:08",
       "url": "https://www.swiggy.com/restaurants/flechazo-raidurgam-hyderabad-693839/dineout"
+    },
+    {
+      "error": "shouldAlert is not defined",
+      "timestamp": "2025-10-06T13:45:46.736Z",
+      "url": "https://www.swiggy.com/restaurants/flechazo-raidurgam-hyderabad-693839/dineout"
     }
   ],
   "Insomnia": [
@@ -76,6 +91,11 @@
       "openTimings": "Not Mentioned",
       "closeTimings": "12AM",
       "timestamp": "06-10-2025 - 15:08",
+      "url": "https://www.swiggy.com/restaurants/insomnia-jubilee-hills-hyderabad-592351/dineout"
+    },
+    {
+      "error": "shouldAlert is not defined",
+      "timestamp": "2025-10-06T13:45:50.353Z",
       "url": "https://www.swiggy.com/restaurants/insomnia-jubilee-hills-hyderabad-592351/dineout"
     }
   ],
@@ -97,6 +117,11 @@
       "closeTimings": "11PM",
       "timestamp": "06-10-2025 - 15:08",
       "url": "https://www.swiggy.com/restaurants/ta-ma-sha-restro-cafe-jubilee-hills-hyderabad-709115/dineout"
+    },
+    {
+      "error": "shouldAlert is not defined",
+      "timestamp": "2025-10-06T13:45:54.026Z",
+      "url": "https://www.swiggy.com/restaurants/ta-ma-sha-restro-cafe-jubilee-hills-hyderabad-709115/dineout"
     }
   ],
   "The Fisherman's Wharf": [
@@ -116,6 +141,11 @@
       "openTimings": "10AM",
       "closeTimings": "Not Mentioned",
       "timestamp": "06-10-2025 - 15:08",
+      "url": "https://www.swiggy.com/restaurants/the-fishermans-wharf-jubilee-hills-hyderabad-592354/dineout"
+    },
+    {
+      "error": "shouldAlert is not defined",
+      "timestamp": "2025-10-06T13:45:57.576Z",
       "url": "https://www.swiggy.com/restaurants/the-fishermans-wharf-jubilee-hills-hyderabad-592354/dineout"
     }
   ]

@@ -33,6 +33,15 @@ function parseTimeToIST(timeStr) {
   return istTime;
 }
 
+const nodemailer = require('nodemailer');
+
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS
+  }
+});
 
 
 async function scrapeRestaurant(url) {
@@ -133,6 +142,21 @@ console.log('📁 Writing to db.json:', dbPath);
         url: r.url
       };
 
+      if (shouldAlert) {
+        const mailOptions = {
+          from: process.env.EMAIL_USER,
+          to: process.env.ALERT_RECIPIENT,
+          subject: `🚨 ALERT: ${r.name} is CLOSED but expected to be OPEN`,
+          text: `Restaurant: ${r.name}\nLocation: ${info.location}\nExpected: ${expectedAvailability}\nActual: ${info.CurrentAvailability}\nTime: ${timestamp}\nLink: ${r.url}`
+        };
+
+        try {
+          await transporter.sendMail(mailOptions);
+          console.log(`📧 Email alert sent for ${r.name}`);
+        } catch (err) {
+          console.error(`❌ Failed to send email for ${r.name}: ${err.message}`);
+        }
+      }
 
       if (!existing[r.name]) existing[r.name] = [];
       existing[r.name].push(entry);
