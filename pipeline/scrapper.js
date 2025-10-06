@@ -15,6 +15,19 @@ function formatISTTimestamp(date) {
   }).replace(',', '').replace(/\//g, '-').replace(' ', ' - ');
 }
 
+function parseTimeToIST(timeStr) {
+  if (!timeStr || timeStr === 'Not Mentioned') return null;
+  const now = new Date();
+  const [time, modifier] = timeStr.trim().split(/(?<=\d)(?=[APMapm]+)/);
+  const [hours, minutes] = time.split(':').map(Number);
+  let h = modifier.toLowerCase().includes('pm') ? hours + 12 : hours;
+  if (h === 24) h = 0;
+  const d = new Date(now);
+  d.setHours(h, minutes || 0, 0, 0);
+  return d;
+}
+
+
 async function scrapeRestaurant(url) {
   const browser = await chromium.launch();
   const page = await browser.newPage();
@@ -88,14 +101,29 @@ console.log('📁 Writing to db.json:', dbPath);
       const info = await scrapeRestaurant(r.url);
       const timestamp = formatISTTimestamp(new Date());
 
+      const openTime = parseTimeToIST(info.openTimings);
+      const closeTime = parseTimeToIST(info.closeTimings);
+      const now = new Date();
+
+      let expectedAvailability = 'Unknown';
+      if (openTime && closeTime) {
+        expectedAvailability = now >= openTime && now <= closeTime ? 'Open' : 'Closed';
+      } else if (openTime) {
+        expectedAvailability = now >= openTime ? 'Open' : 'Closed';
+      } else if (closeTime) {
+        expectedAvailability = now <= closeTime ? 'Open' : 'Closed';
+      }
+
       const entry = {
         location: info.location,
         CurrentAvailability: info.CurrentAvailability,
+        expectedAvailability,
         openTimings: info.openTimings,
         closeTimings: info.closeTimings,
         timestamp,
         url: r.url
       };
+
 
       if (!existing[r.name]) existing[r.name] = [];
       existing[r.name].push(entry);
