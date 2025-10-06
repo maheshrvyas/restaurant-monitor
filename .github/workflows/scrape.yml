@@ -33,6 +33,9 @@ jobs:
       - name: Copy db.json to frontend dashboard
         run: cp backend/db.json frontend/dashboard/public/db.json
 
+      - name: Show git status
+        run: git status
+
       - name: Commit scraped data
         run: |
           git config --global user.name "GitHub Actions"
@@ -41,3 +44,6 @@ jobs:
           git commit -m "Update scraped restaurant data" || echo "No changes to commit"
           git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:${{ github.ref }}
         continue-on-error: true
+
+      - name: Show db.json contents
+        run: cat backend/db.json || echo "db.json not found"
