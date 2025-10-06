@@ -9,6 +9,11 @@ jobs:
   scrape:
     runs-on: ubuntu-latest
 
+    env:
+      EMAIL_USER: ${{ secrets.EMAIL_USER }}
+      EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
+      ALERT_RECIPIENT: ${{ secrets.ALERT_RECIPIENT }}
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -46,4 +51,4 @@ jobs:
         continue-on-error: true
 
       - name: Show db.json contents
-        run: cat backend/db.json || echo "db.json not found" 
+        run: cat backend/db.json || echo "db.json not found"
