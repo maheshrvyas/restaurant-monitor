@@ -836,6 +836,15 @@
       "closeTimings": "11PM",
       "timestamp": "08-10-2025 - 15:46",
       "url": "https://www.swiggy.com/restaurants/592356/dineout"
+    },
+    {
+      "location": "Gsm Shopping Mall, Third Floor, Madinaguda Chanda Nagar Opposite Masjid Abu Bakr Siddique West Hyderabad 500049",
+      "CurrentAvailability": "Open",
+      "expectedAvailability": "Open",
+      "openTimings": "Not Mentioned",
+      "closeTimings": "11PM",
+      "timestamp": "08-10-2025 - 16:27",
+      "url": "https://www.swiggy.com/restaurants/592356/dineout"
     }
   ],
   "Amoroso": [
@@ -1674,6 +1683,15 @@
       "openTimings": "Not Mentioned",
       "closeTimings": "11PM",
       "timestamp": "08-10-2025 - 15:46",
+      "url": "https://www.swiggy.com/restaurants/amoroso-jubilee-hills-hyderabad-1000237/dineout"
+    },
+    {
+      "location": "Plot No. 75, Road Number 52, BN Reddy Colony, Jubilee Hills, Hyderabad, Telangana",
+      "CurrentAvailability": "Open",
+      "expectedAvailability": "Open",
+      "openTimings": "Not Mentioned",
+      "closeTimings": "11PM",
+      "timestamp": "08-10-2025 - 16:27",
       "url": "https://www.swiggy.com/restaurants/amoroso-jubilee-hills-hyderabad-1000237/dineout"
     }
   ],
@@ -2514,6 +2532,15 @@
       "closeTimings": "4PM",
       "timestamp": "08-10-2025 - 15:46",
       "url": "https://www.swiggy.com/restaurants/flechazo-raidurgam-hyderabad-693839/dineout"
+    },
+    {
+      "location": "Unit 1-D,Survey -79/P,G-Square Building, Raidurgam West Hyderabad 500032",
+      "CurrentAvailability": "Closed",
+      "expectedAvailability": "Closed",
+      "openTimings": "6:30PM",
+      "closeTimings": "Not Mentioned",
+      "timestamp": "08-10-2025 - 16:27",
+      "url": "https://www.swiggy.com/restaurants/flechazo-raidurgam-hyderabad-693839/dineout"
     }
   ],
   "Insomnia": [
@@ -3352,6 +3379,15 @@
       "openTimings": "Not Mentioned",
       "closeTimings": "12AM",
       "timestamp": "08-10-2025 - 15:46",
+      "url": "https://www.swiggy.com/restaurants/insomnia-jubilee-hills-hyderabad-592351/dineout"
+    },
+    {
+      "location": "Jaya Chambers, 3Rd & 4Th Floor, Road No. 36, Jubilee Hills, Near British Council Central, West Hyderabad - 500033",
+      "CurrentAvailability": "Open",
+      "expectedAvailability": "Closed",
+      "openTimings": "Not Mentioned",
+      "closeTimings": "12AM",
+      "timestamp": "08-10-2025 - 16:27",
       "url": "https://www.swiggy.com/restaurants/insomnia-jubilee-hills-hyderabad-592351/dineout"
     }
   ],
@@ -4192,6 +4228,15 @@
       "closeTimings": "11PM",
       "timestamp": "08-10-2025 - 15:46",
       "url": "https://www.swiggy.com/restaurants/ta-ma-sha-restro-cafe-jubilee-hills-hyderabad-709115/dineout"
+    },
+    {
+      "location": "Flat 105-B, Block A, F, Supreme Enclave, Gut Tala, Begumpet Circle 30, Jubilee Hills Near Chinnari Collections Children'S Fashion Boutique, Central West Hyderabad 500033",
+      "CurrentAvailability": "Open",
+      "expectedAvailability": "Open",
+      "openTimings": "Not Mentioned",
+      "closeTimings": "11PM",
+      "timestamp": "08-10-2025 - 16:27",
+      "url": "https://www.swiggy.com/restaurants/ta-ma-sha-restro-cafe-jubilee-hills-hyderabad-709115/dineout"
     }
   ],
   "The Fisherman's Wharf": [
@@ -5030,6 +5075,15 @@
       "openTimings": "Not Mentioned",
       "closeTimings": "10PM",
       "timestamp": "08-10-2025 - 15:46",
+      "url": "https://www.swiggy.com/restaurants/the-fishermans-wharf-jubilee-hills-hyderabad-592354/dineout"
+    },
+    {
+      "location": "Ou Central, 8-1-287/Ou/389, First Floor, Ou Colony, Shaikpet, Manikonda Near Sbi Bank, West Hyderabad 500008",
+      "CurrentAvailability": "Open",
+      "expectedAvailability": "Open",
+      "openTimings": "Not Mentioned",
+      "closeTimings": "10PM",
+      "timestamp": "08-10-2025 - 16:27",
       "url": "https://www.swiggy.com/restaurants/the-fishermans-wharf-jubilee-hills-hyderabad-592354/dineout"
     }
   ]
