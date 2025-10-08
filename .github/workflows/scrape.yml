@@ -1,8 +1,8 @@
 name: Scrape Restaurant Status
 
-on:
-  schedule:
-    - cron: '*/55 * * * *'  # every 5 minutes
+#on:
+#  schedule:
+    - cron: '*/5555 * * * *'  # every 5555 minutes
   workflow_dispatch:
 
 jobs:
@@ -53,3 +53,4 @@ jobs:
       - name: Show db.json contents
 
         run: cat backend/db.json || echo "db.json not found"
+
