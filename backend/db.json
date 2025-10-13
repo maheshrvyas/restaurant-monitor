@@ -949,6 +949,20 @@
       "error": "browserType.launch: Executable doesn't exist at /home/codespace/.cache/ms-playwright/chromium_headless_shell-1193/chrome-linux/headless_shell\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
       "timestamp": "2025-10-13T04:56:47.247Z",
       "url": "https://www.swiggy.com/restaurants/592356/dineout"
+    },
+    {
+      "error": "browserType.launch: Executable doesn't exist at /home/codespace/.cache/ms-playwright/chromium_headless_shell-1193/chrome-linux/headless_shell\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
+      "timestamp": "2025-10-13T05:16:52.831Z",
+      "url": "https://www.swiggy.com/restaurants/592356/dineout"
+    },
+    {
+      "location": "Gsm Shopping Mall, Third Floor, Madinaguda Chanda Nagar Opposite Masjid Abu Bakr Siddique West Hyderabad 500049",
+      "CurrentAvailability": "Closed",
+      "expectedAvailability": "Closed",
+      "openTimings": "11AM",
+      "closeTimings": "Not Mentioned",
+      "timestamp": "13-10-2025 - 10:51",
+      "url": "https://www.swiggy.com/restaurants/592356/dineout"
     }
   ],
   "Amoroso": [
@@ -1900,6 +1914,20 @@
     {
       "error": "browserType.launch: Executable doesn't exist at /home/codespace/.cache/ms-playwright/chromium_headless_shell-1193/chrome-linux/headless_shell\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
       "timestamp": "2025-10-13T04:56:47.248Z",
+      "url": "https://www.swiggy.com/restaurants/amoroso-jubilee-hills-hyderabad-1000237/dineout"
+    },
+    {
+      "error": "browserType.launch: Executable doesn't exist at /home/codespace/.cache/ms-playwright/chromium_headless_shell-1193/chrome-linux/headless_shell\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
+      "timestamp": "2025-10-13T05:16:52.832Z",
+      "url": "https://www.swiggy.com/restaurants/amoroso-jubilee-hills-hyderabad-1000237/dineout"
+    },
+    {
+      "location": "Plot No. 75, Road Number 52, BN Reddy Colony, Jubilee Hills, Hyderabad, Telangana",
+      "CurrentAvailability": "Open",
+      "expectedAvailability": "Open",
+      "openTimings": "Not Mentioned",
+      "closeTimings": "11PM",
+      "timestamp": "13-10-2025 - 10:51",
       "url": "https://www.swiggy.com/restaurants/amoroso-jubilee-hills-hyderabad-1000237/dineout"
     }
   ],
@@ -2853,6 +2881,20 @@
       "error": "browserType.launch: Executable doesn't exist at /home/codespace/.cache/ms-playwright/chromium_headless_shell-1193/chrome-linux/headless_shell\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
       "timestamp": "2025-10-13T04:56:47.249Z",
       "url": "https://www.swiggy.com/restaurants/flechazo-raidurgam-hyderabad-693839/dineout"
+    },
+    {
+      "error": "browserType.launch: Executable doesn't exist at /home/codespace/.cache/ms-playwright/chromium_headless_shell-1193/chrome-linux/headless_shell\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
+      "timestamp": "2025-10-13T05:16:52.833Z",
+      "url": "https://www.swiggy.com/restaurants/flechazo-raidurgam-hyderabad-693839/dineout"
+    },
+    {
+      "location": "Unit 1-D,Survey -79/P,G-Square Building, Raidurgam West Hyderabad 500032",
+      "CurrentAvailability": "Closed",
+      "expectedAvailability": "Closed",
+      "openTimings": "11:30AM",
+      "closeTimings": "Not Mentioned",
+      "timestamp": "13-10-2025 - 10:51",
+      "url": "https://www.swiggy.com/restaurants/flechazo-raidurgam-hyderabad-693839/dineout"
     }
   ],
   "Insomnia": [
@@ -3804,6 +3846,20 @@
     {
       "error": "browserType.launch: Executable doesn't exist at /home/codespace/.cache/ms-playwright/chromium_headless_shell-1193/chrome-linux/headless_shell\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
       "timestamp": "2025-10-13T04:56:47.250Z",
+      "url": "https://www.swiggy.com/restaurants/insomnia-jubilee-hills-hyderabad-592351/dineout"
+    },
+    {
+      "error": "browserType.launch: Executable doesn't exist at /home/codespace/.cache/ms-playwright/chromium_headless_shell-1193/chrome-linux/headless_shell\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
+      "timestamp": "2025-10-13T05:16:52.835Z",
+      "url": "https://www.swiggy.com/restaurants/insomnia-jubilee-hills-hyderabad-592351/dineout"
+    },
+    {
+      "location": "Jaya Chambers, 3Rd & 4Th Floor, Road No. 36, Jubilee Hills, Near British Council Central, West Hyderabad - 500033",
+      "CurrentAvailability": "Closed",
+      "expectedAvailability": "Closed",
+      "openTimings": "12PM",
+      "closeTimings": "Not Mentioned",
+      "timestamp": "13-10-2025 - 10:51",
       "url": "https://www.swiggy.com/restaurants/insomnia-jubilee-hills-hyderabad-592351/dineout"
     }
   ],
@@ -4757,6 +4813,20 @@
       "error": "browserType.launch: Executable doesn't exist at /home/codespace/.cache/ms-playwright/chromium_headless_shell-1193/chrome-linux/headless_shell\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
       "timestamp": "2025-10-13T04:56:47.251Z",
       "url": "https://www.swiggy.com/restaurants/ta-ma-sha-restro-cafe-jubilee-hills-hyderabad-709115/dineout"
+    },
+    {
+      "error": "browserType.launch: Executable doesn't exist at /home/codespace/.cache/ms-playwright/chromium_headless_shell-1193/chrome-linux/headless_shell\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
+      "timestamp": "2025-10-13T05:16:52.836Z",
+      "url": "https://www.swiggy.com/restaurants/ta-ma-sha-restro-cafe-jubilee-hills-hyderabad-709115/dineout"
+    },
+    {
+      "location": "Flat 105-B, Block A, F, Supreme Enclave, Gut Tala, Begumpet Circle 30, Jubilee Hills Near Chinnari Collections Children'S Fashion Boutique, Central West Hyderabad 500033",
+      "CurrentAvailability": "Closed",
+      "expectedAvailability": "Closed",
+      "openTimings": "11AM",
+      "closeTimings": "Not Mentioned",
+      "timestamp": "13-10-2025 - 10:51",
+      "url": "https://www.swiggy.com/restaurants/ta-ma-sha-restro-cafe-jubilee-hills-hyderabad-709115/dineout"
     }
   ],
   "The Fisherman's Wharf": [
@@ -5706,8 +5776,12 @@
       "url": "https://www.swiggy.com/restaurants/the-fishermans-wharf-jubilee-hills-hyderabad-592354/dineout"
     },
     {
-      "error": "browserType.launch: Executable doesn't exist at /home/codespace/.cache/ms-playwright/chromium_headless_shell-1193/chrome-linux/headless_shell\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
-      "timestamp": "2025-10-13T04:56:47.252Z",
+      "location": "Ou Central, 8-1-287/Ou/389, First Floor, Ou Colony, Shaikpet, Manikonda Near Sbi Bank, West Hyderabad 500008",
+      "CurrentAvailability": "Closed",
+      "expectedAvailability": "Open",
+      "openTimings": "10AM",
+      "closeTimings": "Not Mentioned",
+      "timestamp": "13-10-2025 - 10:51",
       "url": "https://www.swiggy.com/restaurants/the-fishermans-wharf-jubilee-hills-hyderabad-592354/dineout"
     }
   ]

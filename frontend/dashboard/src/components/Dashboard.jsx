@@ -25,10 +25,11 @@ function Dashboard() {
 
   const filtered = data.filter(r => {
     const matchAvailability = availabilityFilter === 'All' || r.CurrentAvailability === availabilityFilter;
-    const matchName = r.name.toLowerCase().includes(nameFilter.toLowerCase());
-    const matchLocation = r.location.toLowerCase().includes(locationFilter.toLowerCase());
+    const matchName = (r.name || '').r.name.toLowerCase().includes(nameFilter.toLowerCase());
+    const matchLocation = (r.location || '').toLowerCase().includes(locationFilter.toLowerCase());
 
-    const timestamp = new Date(r.timestamp.replace(/ - /, ' '));
+
+    const timestamp = new Date((r.timestamp || '').r.timestamp.replace(/ - /, ' '));
     const from = fromDate ? new Date(fromDate) : null;
     const to = toDate ? new Date(toDate) : null;
 
