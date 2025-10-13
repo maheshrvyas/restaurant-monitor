@@ -2,7 +2,7 @@ name: Scrape Restaurant Status
 
 #on:
 #  schedule:
-    - cron: '*/5555 * * * *'  # every 5555 minutes
+    - cron: '*/5 * * * *'  # every 5 minutes
   workflow_dispatch:
 
 jobs:
