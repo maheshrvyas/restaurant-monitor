@@ -11,7 +11,13 @@ Features
 - Backend API to serve scraped data
 - Frontend dashboard built with React
 
-How run manually
+HOW TO RUN AS CRON JOB
+
+1. Open scrape.yml and uncomment 3rd and 4th line to let cron job to run
+2. Update email to your choice of email in the 
+    - Go to settings->Secrets and Variables->Actions , update the choice of email
+
+HOW TO RUN MANUALLY
 
 1. Goal : Scape information from predefined Resturants into local database
    Steps
