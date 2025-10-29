@@ -16,7 +16,7 @@ function formatISTTimestamp(date) {
 }
 
 function parseTimeToIST(timeStr) {
-  if (!timeStr || timeStr === 'Not Mentioned') return null;
+ if (!timeStr || timeStr === 'Not Mentioned') return null;
   const match = timeStr.match(/(\d{1,2})(?::(\d{2}))?\s*(AM|PM)/i);
   if (!match) return null;
 
@@ -30,6 +30,12 @@ function parseTimeToIST(timeStr) {
   const now = new Date();
   const istTime = new Date(now);
   istTime.setHours(hour, minute, 0, 0);
+
+  // 🛠️ Special case: if time is 12 AM and it's a close time, assume it's next day
+  if (hour === 0 && period.toUpperCase() === 'AM') {
+    istTime.setDate(istTime.getDate() + 1);
+  }
+
   return istTime;
 }
 
